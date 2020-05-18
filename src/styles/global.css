@@ -2,6 +2,19 @@ html {
   background-color: #fbddc0;
 }
 
+h1 {
+  background: -webkit-linear-gradient(#f7b679, #e77c7c, #61305d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 a {
 	color: #61305d;
+}
+
+.faces {
+    display: grid;
+    justify-content: space-between;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
 }

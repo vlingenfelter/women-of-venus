@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
+import Image from "gatsby-image"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 
@@ -18,6 +19,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <article>
+        
         <header>
           <h1
             style={{
@@ -27,15 +29,16 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           >
             {post.frontmatter.title}
           </h1>
-          <p
+          <Image 
+            fluid={post.frontmatter.face.childImageSharp.fluid} 
+            alt={post.frontmatter.title}
             style={{
-              ...scale(-1 / 5),
-              display: `block`,
-              marginBottom: rhythm(1),
+              marginRight: rhythm(1 / 2),
+              marginBottom: 0,
+              maxWidth: 500,
             }}
-          >
-            {post.frontmatter.date}
-          </p>
+          />
+
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
@@ -43,9 +46,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             marginBottom: rhythm(1),
           }}
         />
-        <footer>
-          <Bio />
-        </footer>
+        
       </article>
 
       <nav>
@@ -95,6 +96,24 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        face {
+          childImageSharp {
+            fluid(maxWidth: 600, quality: 90) {
+              base64
+              tracedSVG
+              aspectRatio
+              src
+              srcSet
+              srcWebp
+              srcSetWebp
+              sizes
+              originalImg
+              originalName
+              presentationWidth
+              presentationHeight
+            }
+          }
+        }
       }
     }
   }

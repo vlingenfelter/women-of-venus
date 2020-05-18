@@ -5,7 +5,7 @@ module.exports = {
       name: `Violet Lingenfelter`,
       summary: `who lives in Boston and has too many passion projects.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `A collection of women who reside on Venus.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
       twitter: `kylemathews`,

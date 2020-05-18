@@ -2,6 +2,7 @@
 import React from "react"
 import { PageProps, Link, graphql } from "gatsby"
 
+import Image from "gatsby-image"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -37,6 +38,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
+      <div className="faces">
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
@@ -48,22 +50,24 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                 }}
               >
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
+                <Image 
+                  fluid={node.frontmatter.face.childImageSharp.fluid}
+                  alt={node.frontmatter.title}
+                  style={{
+                    marginRight: rhythm(1 / 2),
+                    marginBottom: 0,
+                    maxWidth: 300,
+                  }}
+                />
+            
                 </Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
             </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </section>
           </article>
         )
       })}
-     <Bio />
+      </div>
+      <Bio />
     </Layout>
   )
 }
@@ -88,6 +92,24 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            face {
+              childImageSharp {
+                fluid(maxWidth: 300, quality: 90) {
+                  base64
+                  tracedSVG
+                  aspectRatio
+                  src
+                  srcSet
+                  srcWebp
+                  srcSetWebp
+                  sizes
+                  originalImg
+                  originalName
+                  presentationWidth
+                  presentationHeight
+                }
+              }
+            }
           }
         }
       }
