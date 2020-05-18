@@ -1,56 +1,70 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { StaticQuery, graphql } from 'gatsby';
-import styled from 'styled-components';
+import React from "react"
+import { Link } from "gatsby"
 
-import { Footer, GlobalStyles } from '../components';
+import { rhythm, scale } from "../utils/typography"
 
-const Wrapper = styled.div`
-  padding: 0 var(--sides-padding-desktop);
-  margin: 0 auto;
-  max-width: 1400px;
+const Layout = ({ location, title, children }) => {
+  const rootPath = `${__PATH_PREFIX__}/`
+  let header
 
-  @media (max-width: 849px) {
-    padding: 0 var(--sides-padding-mobile);
+  if (location.pathname === rootPath) {
+    header = (
+      <h1
+        style={{
+          ...scale(1.5),
+          marginBottom: rhythm(1.5),
+          marginTop: 0,
+        }}
+      >
+        <Link
+          style={{
+            boxShadow: `none`,
+            color: `inherit`,
+          }}
+          to={`/`}
+        >
+          {title}
+        </Link>
+      </h1>
+    )
+  } else {
+    header = (
+      <h3
+        style={{
+          fontFamily: `Montserrat, sans-serif`,
+          marginTop: 0,
+        }}
+      >
+        <Link
+          style={{
+            boxShadow: `none`,
+            color: `inherit`,
+          }}
+          to={`/`}
+        >
+          {title}
+        </Link>
+      </h3>
+    )
   }
-`;
-
-const Content = styled.main`
-  max-width: 900px;
-  margin: 0 auto;
-
-  @media (max-width: 849px) {
-    width: 100%;
-  }
-`;
-
-const Layout = ({ children }) => {
   return (
-    <StaticQuery
-      query={graphql`
-        query SiteTitleQuery {
-          site {
-            siteMetadata {
-              title
-            }
-          }
-        }
-      `}
-      render={data => (
-        <>
-          <GlobalStyles />
-          <Wrapper>
-            <Content>{children}</Content>
-            <Footer />
-          </Wrapper>
-        </>
-      )}
-    />
-  );
-};
+    <div
+      style={{
+        marginLeft: `auto`,
+        marginRight: `auto`,
+        maxWidth: rhythm(24),
+        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+      }}
+    >
+      <header>{header}</header>
+      <main>{children}</main>
+      <footer>
+        © {new Date().getFullYear()}, Built with
+        {` `}
+        <a href="https://www.gatsbyjs.org">Gatsby</a>
+      </footer>
+    </div>
+  )
+}
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
-export default Layout;
+export default Layout

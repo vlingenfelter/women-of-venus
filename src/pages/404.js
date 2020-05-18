@@ -1,41 +1,29 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import styled from 'styled-components';
+import React from "react"
+import { graphql } from "gatsby"
 
-import { Button, HeadingXL, Layout, SEO, TextBody } from '../components';
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-`;
+const NotFoundPage = ({ data, location }) => {
+  const siteTitle = data.site.siteMetadata.title
 
-const ButtonCentered = styled(Button)`
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10vh;
-`;
-
-const NotFoundPage = () => {
   return (
-    <>
-      <SEO title="404: Not found" />
-      <Layout>
-        <Wrapper>
-          <HeadingXL>NOT FOUND</HeadingXL>
-          <TextBody style={{ textAlign: 'center' }}>
-            This page doesn&#39;t exist{' '}
-            <span role="img" aria-label="duh">
-              😓
-            </span>
-          </TextBody>
-          <Link to="/">
-            <ButtonCentered>Go home</ButtonCentered>
-          </Link>
-        </Wrapper>
-      </Layout>
-    </>
-  );
-};
+    <Layout location={location} title={siteTitle}>
+      <SEO title="404: Not Found" />
+      <h1>Not Found</h1>
+      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    </Layout>
+  )
+}
 
-export default NotFoundPage;
+export default NotFoundPage
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
