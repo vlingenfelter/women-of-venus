@@ -46,7 +46,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
             <header>
               <h3
                 style={{
-                  marginBottom: rhythm(1 / 4),
+                  marginBottom: rhythm(1 / 2),
                 }}
               >
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
@@ -67,7 +67,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
         )
       })}
       </div>
-      <Bio />
+     
     </Layout>
   )
 }
@@ -81,7 +81,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___index], order: ASC }) {
       edges {
         node {
           excerpt

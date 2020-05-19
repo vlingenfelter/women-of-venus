@@ -12,9 +12,22 @@ a {
 	color: #61305d;
 }
 
+footer {
+	text-align: center;
+}
+
 .faces {
     display: grid;
     justify-content: space-between;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media all and (max-width: 480px) { 
+	.faces { 
+		display: grid;
+    justify-content: space-between;
     grid-gap: 10px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+	}
 }

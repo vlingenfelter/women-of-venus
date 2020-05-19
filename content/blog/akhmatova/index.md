@@ -1,8 +1,8 @@
 ---
-title: Rachel Carson
+title: Anna Akhmatova
 date: "2015-05-01T22:12:03.284Z"
-face: "./carson.png"
-index: 73
+face: "./akhmatova.png"
+index: 11
 description: ""
 ---
 
