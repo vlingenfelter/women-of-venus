@@ -1,10 +1,10 @@
 ---
-title: Karen Boye
+title: Akiko Yosano
 date: "2015-05-01T22:12:03.284Z"
-face: "./boye.png"
-index: 58
-description: ""
-tags: ["author", "poet"]
+face: "./akiko.png"
+index: 12
+description: "Tanka poetess (1878-1942)"
+tags: ["author", "poet", "feminist", "social reformer"]
 ---
 
 Lorem ipsum dolor sit amet, et tamquam ceteros expetenda sea, laoreet eligendi constituam cum te. His novum admodum electram ne. Sed id dolor accusam, nam ut primis omittam legendos. Ad accumsan efficiantur qui, usu id justo scriptorem appellantur. Natum eligendi rationibus in duo, essent maiestatis vis ne. Eu has illud laudem, at causae eloquentiam eam.

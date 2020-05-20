@@ -24,25 +24,27 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <h1
             style={{
               marginTop: rhythm(1),
-              marginBottom: 0,
+              marginBottom: rhythm(1),
             }}
           >
             {post.frontmatter.title}
           </h1>
-          <Image 
+        </header>
+         <Image 
             fluid={post.frontmatter.face.childImageSharp.fluid} 
             alt={post.frontmatter.title}
             style={{
-              marginRight: rhythm(1 / 2),
               marginBottom: 0,
-              maxWidth: 500,
+              maxWidth: 600,
             }}
           />
-
-        </header>
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <p> {post.frontmatter.tags.map((tag) => 
-          ( <Link className="tag" to={`/tags/${kebabCase(tag)}/`}> #{tag} < /Link>)
+        <section dangerouslySetInnerHTML={{ __html: post.html }} 
+           style={{
+             marginTop: rhythm(1)
+           }}
+        />
+       <p> {post.frontmatter.tags.map((tag) => 
+          ( <Link className="tag" to={`/tags/${kebabCase(tag)}/`}> {tag} < /Link>)
             )} 
         </p>
         

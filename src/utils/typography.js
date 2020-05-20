@@ -31,8 +31,9 @@ const typography = new Typography({
 	  },
 	],
   baseFontSize: '18px',
+  scaleRatio: 3.5,
   baseLineHeight: 1.666,
-  headerFontFamily: ['Roboto Mono', 'Helvetica', 'sans-serif'],
+  headerFontFamily: ['Glysa', 'Helvetica', 'sans-serif'],
   bodyFontFamily: ['Merriweather', 'serif'],
   // See below for the full list of options.
 })

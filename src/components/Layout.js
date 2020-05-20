@@ -11,7 +11,6 @@ const Layout = ({ location, title, children }) => {
     header = (
       <h1
         style={{
-          ...scale(1.5),
           marginBottom: rhythm(1.5),
           marginTop: 0,
           textAlign: `center`,
@@ -21,6 +20,7 @@ const Layout = ({ location, title, children }) => {
           style={{
             boxShadow: `none`,
             color: `inherit`,
+            textDecoration: `none`,
           }}
           to={`/`}
         >
@@ -40,6 +40,7 @@ const Layout = ({ location, title, children }) => {
           style={{
             boxShadow: `none`,
             color: `inherit`,
+            textDecoration: `none`,
           }}
           to={`/`}
         >
@@ -62,7 +63,7 @@ const Layout = ({ location, title, children }) => {
       <footer style={{
                   marginTop: rhythm(1),
                 }}>
-        Made with <span style={{color:"#e77c7c"}}>❤</span> Boston, MA
+        Made with <span style={{color:"#e77c7c"}}>❤</span> in Boston, MA
         <br />
         Powered by
         {` `}
