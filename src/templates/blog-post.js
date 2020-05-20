@@ -1,11 +1,11 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Image from "gatsby-image"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import kebabCase from "lodash/kebabCase"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -41,11 +41,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
+        <p> {post.frontmatter.tags.map((tag) => 
+          ( <Link className="tag" to={`/tags/${kebabCase(tag)}/`}> #{tag} < /Link>)
+            )} 
+        </p>
         
       </article>
 
@@ -96,6 +95,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
         face {
           childImageSharp {
             fluid(maxWidth: 600, quality: 90) {

@@ -27,7 +27,7 @@ type Data = {
           slug: string
         }
       }
-    }[]
+    }
   }
 }
 
