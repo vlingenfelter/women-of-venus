@@ -100,7 +100,7 @@ export const pageQuery = graphql`
         tags
         face {
           childImageSharp {
-            fluid(maxWidth: 600, quality: 90) {
+            fluid(maxWidth: 600, quality: 90, traceSVG: { color: "#e77c7c"}) {
               base64
               tracedSVG
               aspectRatio
