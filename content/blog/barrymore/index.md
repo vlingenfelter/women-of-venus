@@ -1,10 +1,10 @@
 ---
-title: Olga Bergglots
+title: Ethel Barrymore
 date: "2015-05-01T22:12:03.284Z"
-face: "./bergglots.png"
-index: 45
-description: "Russian poet (1910-1975)"
-tags: ["poet"]
+face: "./barrymore.png"
+index: 33
+description: "American actress (1879-1959)."
+tags: ["actor"]
 ---
 
 Lorem ipsum dolor sit amet, et tamquam ceteros expetenda sea, laoreet eligendi constituam cum te. His novum admodum electram ne. Sed id dolor accusam, nam ut primis omittam legendos. Ad accumsan efficiantur qui, usu id justo scriptorem appellantur. Natum eligendi rationibus in duo, essent maiestatis vis ne. Eu has illud laudem, at causae eloquentiam eam.
