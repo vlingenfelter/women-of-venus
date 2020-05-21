@@ -12,6 +12,7 @@ module.exports = {
       projects: `https://violetlingenfelter.com/projects/`,
     },
   },
+  pathPrefix: "/women-of-venus",
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
