@@ -20,10 +20,10 @@ const TagsPage = ({
 }) => (
     
     <Layout location={location} title={title}>
-      <h1>Tags</h1>
+      <h1>Categories</h1>
       <p>
         {group.map(tag => (
-          <Link className="tag" to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+          <Link className="tag" to={`/categories/${kebabCase(tag.fieldValue)}/`}>
             {tag.fieldValue}
           </Link>
         ))}

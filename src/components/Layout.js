@@ -9,6 +9,7 @@ const Layout = ({ location, title, children }) => {
 
   if (location.pathname === rootPath) {
     header = (
+      <div>
       <h1
         style={{
           marginBottom: rhythm(1.5),
@@ -16,37 +17,57 @@ const Layout = ({ location, title, children }) => {
           textAlign: `center`,
         }}
       >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-            textDecoration: `none`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
+        {title}
       </h1>
+      <nav>
+        <Link 
+          to={`/categories`}
+        >
+          by category
+        </Link>
+        <Link 
+          to={`/faces`}
+        >
+          by face
+        </Link>
+        <Link 
+          to={`/faces`}
+        >
+          at random
+        </Link>
+      </nav>
+      </div>
     )
   } else {
     header = (
-      <h3
-        style={{
-          fontFamily: `Montserrat, sans-serif`,
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-            textDecoration: `none`,
-          }}
-          to={`/`}
+      <nav>
+        <h3>
+          <Link
+            style={{
+              boxShadow: `none`,
+              textDecoration: `none`,
+            }}
+            to={`/`}
+          >
+            Women of Venus
+          </Link>
+        </h3>
+        <Link 
+          to={`/categories`}
         >
-          {title}
+          by category
         </Link>
-      </h3>
+        <Link 
+          to={`/faces`}
+        >
+          by face
+        </Link>
+        <Link 
+          to={`/faces`}
+        >
+          at random
+        </Link>
+      </nav>
     )
   }
   return (

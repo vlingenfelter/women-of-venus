@@ -44,7 +44,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
            }}
         />
        <p> {post.frontmatter.tags.map((tag) => 
-          ( <Link className="tag" to={`/tags/${kebabCase(tag)}/`}> {tag} < /Link>)
+          ( <Link className="tag" to={`/categories/${kebabCase(tag)}/`}> {tag} < /Link>)
             )} 
         </p>
         

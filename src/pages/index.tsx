@@ -38,35 +38,6 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      <div className="faces">
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
-        return (
-          <article key={node.fields.slug}>
-            <header>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 2),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                <Image 
-                  fluid={node.frontmatter.face.childImageSharp.fluid}
-                  alt={node.frontmatter.title}
-                  style={{
-                    marginRight: rhythm(1 / 2),
-                    marginBottom: 0,
-                    maxWidth: 300,
-                  }}
-                />
-            
-                </Link>
-              </h3>
-            </header>
-          </article>
-        )
-      })}
-      </div>
      
     </Layout>
   )
