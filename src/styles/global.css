@@ -34,14 +34,6 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-@media all and (max-width: 480px) { 
-	.faces { 
-		display: grid;
-    justify-content: space-between;
-    grid-gap: 10px;
-    grid-template-columns: 1fr;
-	}
-}
 
 .tag {
     display: inline-block;
@@ -52,4 +44,37 @@ footer {
     padding: .625rem;
     border: 2px solid #e77c7c;
     color: black;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.navLinkWrapper {
+  display: flex;
+  flex-direction: row;
+  padding-left: 1em;
+}
+
+.navLink {
+  padding-right: 1em;
+}
+
+@media all and (max-width: 480px) { 
+  .faces { 
+    display: grid;
+    justify-content: space-between;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+  }
+
+  .nav { 
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navLinkWrapper {
+    padding-left: 0em;
+  }
 }

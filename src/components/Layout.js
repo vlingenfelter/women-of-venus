@@ -19,29 +19,21 @@ const Layout = ({ location, title, children }) => {
       >
         {title}
       </h1>
-      <nav>
-        <Link 
-          to={`/categories`}
-        >
-          by category
-        </Link>
-        <Link 
-          to={`/faces`}
-        >
-          by face
-        </Link>
-        <Link 
-          to={`/faces`}
-        >
-          at random
-        </Link>
-      </nav>
       </div>
     )
   } else {
     header = (
-      <nav>
-        <h3>
+      <nav
+        className='nav'
+        style={{
+          marginBottom: rhythm(1)
+        }}
+      >
+        <h3
+          style={{
+            marginBottom: rhythm(0.25),
+          }}
+        >
           <Link
             style={{
               boxShadow: `none`,
@@ -52,21 +44,28 @@ const Layout = ({ location, title, children }) => {
             Women of Venus
           </Link>
         </h3>
+        <div
+          className="navLinkWrapper"
+        >
         <Link 
+          className="navLink"
           to={`/categories`}
         >
           by category
         </Link>
         <Link 
+          className="navLink"
           to={`/faces`}
         >
           by face
         </Link>
         <Link 
+          className="navLink"
           to={`/faces`}
         >
           at random
         </Link>
+        </div>
       </nav>
     )
   }
