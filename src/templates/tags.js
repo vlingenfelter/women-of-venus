@@ -39,6 +39,18 @@ const Tags = ({ pageContext, data, location }) => {
             )
           })}
       </div>
+      <div
+        style={{
+            display: `flex`,
+            justifyContent: `center`,
+          }}
+      >
+      <Link
+        to='/categories/'
+      >
+        See all categories
+      </Link>
+      </div>
     </Layout>
   )
 }

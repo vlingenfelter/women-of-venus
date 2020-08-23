@@ -21,7 +21,13 @@ const typography = new Typography({
 	    ],
 	  },
 	  {
-	    name: 'Merriweather',
+	    name: 'Arvo',
+	    styles: [
+	      '700',
+	    ],
+	  },
+	  {
+	    name: 'Open Sans',
 	    styles: [
 	      '400',
 	      '400i',
@@ -31,10 +37,10 @@ const typography = new Typography({
 	  },
 	],
   baseFontSize: '18px',
-  scaleRatio: 3.5,
+  scaleRatio: 3,
   baseLineHeight: 1.666,
-  headerFontFamily: ['Glysa', 'Helvetica', 'sans-serif'],
-  bodyFontFamily: ['Merriweather', 'serif'],
+  headerFontFamily: ['Arvo', 'sans-serif'],
+  bodyFontFamily: ['Open Sans', 'serif'],
   // See below for the full list of options.
 })
 

@@ -9,6 +9,7 @@ const Layout = ({ location, title, children }) => {
 
   if (location.pathname === rootPath) {
     header = (
+      <div>
       <h1
         style={{
           marginBottom: rhythm(1.5),
@@ -16,37 +17,56 @@ const Layout = ({ location, title, children }) => {
           textAlign: `center`,
         }}
       >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-            textDecoration: `none`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
+        {title}
       </h1>
+      </div>
     )
   } else {
     header = (
-      <h3
+      <nav
+        className='nav'
         style={{
-          fontFamily: `Montserrat, sans-serif`,
-          marginTop: 0,
+          marginBottom: rhythm(1)
         }}
       >
-        <Link
+        <h3
           style={{
-            boxShadow: `none`,
-            color: `inherit`,
-            textDecoration: `none`,
+            marginBottom: rhythm(0.25),
           }}
-          to={`/`}
         >
-          {title}
+          <Link
+            style={{
+              boxShadow: `none`,
+              textDecoration: `none`,
+            }}
+            to={`/`}
+          >
+            Women of Venus
+          </Link>
+        </h3>
+        <div
+          className="navLinkWrapper"
+        >
+        <Link 
+          className="navLink"
+          to={`/categories`}
+        >
+          by category
         </Link>
-      </h3>
+        <Link 
+          className="navLink"
+          to={`/faces`}
+        >
+          by face
+        </Link>
+        <Link 
+          className="navLink"
+          to={`/faces`}
+        >
+          at random
+        </Link>
+        </div>
+      </nav>
     )
   }
   return (
@@ -63,6 +83,8 @@ const Layout = ({ location, title, children }) => {
       <footer style={{
                   marginTop: rhythm(1),
                 }}>
+        <Link to="/about/">About this project</Link>
+        <br / >
         Made with <span style={{color:"#e77c7c"}}>❤</span> in Boston, MA
         <br />
         Powered by
