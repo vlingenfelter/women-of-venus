@@ -36,10 +36,9 @@ const About = ({location}) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-     <h1>About</h1>
+     <h1>What is happening here?</h1>
      <p> This is a passion project</p>
-     
-      <Bio />
+    
     </Layout>
   )
 }

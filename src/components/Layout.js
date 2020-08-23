@@ -83,6 +83,8 @@ const Layout = ({ location, title, children }) => {
       <footer style={{
                   marginTop: rhythm(1),
                 }}>
+        <Link to="/about/">About this project</Link>
+        <br / >
         Made with <span style={{color:"#e77c7c"}}>❤</span> in Boston, MA
         <br />
         Powered by

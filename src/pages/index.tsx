@@ -6,7 +6,7 @@ import Image from "gatsby-image"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+import { rhythm, scale } from "../utils/typography"
 
 type Data = {
   site: {
@@ -37,7 +37,34 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+      <SEO title="Home" />
+
+      <p
+        style={{
+          fontSize: rhythm(1),
+        }} 
+      >
+        There is a planet far, far away. Its surface is marked by many holes and craters. In each crater is an Earthling woman. Each woman was specifically chosen to inhabit this harsh, hot planet. But why? 
+        <br/>
+        <br/>
+        Who are these women?
+      </p>
+
+      <div>
+        <Link
+          to='/faces/'
+        >
+          Browse them by face
+        </Link>
+      </div>
+
+      <div>
+        <Link
+          to='/categories/'
+        >
+          Browse them by category
+        </Link>
+      </div>
      
     </Layout>
   )
