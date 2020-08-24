@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{"2l/u":function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),o=t.n(a),i=t("Bl7J");n.default=function(e){var n=e.location;return o.a.createElement(i.a,{location:n,title:"Women of Venus"},o.a.createElement("h1",null,"What is happening here?"),o.a.createElement("p",null," This is a passion project"))}}}]);
-//# sourceMappingURL=component---src-pages-about-tsx-f406c137821f02d1e3a4.js.map
