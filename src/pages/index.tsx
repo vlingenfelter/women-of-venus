@@ -48,23 +48,48 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
         <br/>
         <br/>
         Who are these women?
-      </p>
+        <br />
+        <br />
+        Let us introduce you:
+     
 
-      <div>
+      <div
+        style={{
+          paddingLeft: rhythm(0.5),
+        }}
+      >
         <Link
           to='/faces/'
         >
-          Browse them by face
+          - Meet them all
         </Link>
       </div>
 
-      <div>
+      <div
+        style={{
+          paddingLeft: rhythm(0.5),
+        }}
+      >
         <Link
           to='/categories/'
         >
-          Browse them by category
+          - Meet them by category
         </Link>
       </div>
+
+      <div
+        style={{
+          paddingLeft: rhythm(0.5),
+        }}
+      >
+        <Link
+          to='/faces/'
+        >
+          - Meet one at random
+        </Link>
+      </div>
+
+      </p>
      
     </Layout>
   )
