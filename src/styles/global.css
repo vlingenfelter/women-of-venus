@@ -54,7 +54,7 @@ footer {
 @media all and (max-width: 480px) { 
   .faces { 
     display: grid;
-    justify-content: space-between;
+    justify-content: center;
     grid-gap: 10px;
     grid-template-columns: 1fr;
   }
