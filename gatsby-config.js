@@ -8,7 +8,7 @@ module.exports = {
     description: `A collection of women who reside on Venus.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `datavizviolet`,
       projects: `https://violetlingenfelter.com/projects/`,
     },
   },

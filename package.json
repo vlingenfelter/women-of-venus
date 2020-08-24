@@ -41,7 +41,7 @@
     "gh-pages": "^2.2.0",
     "prettier": "2.0.5"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/vlingenfelter/women-of-venus#readme",
   "keywords": [
     "gatsby"
   ],
@@ -49,7 +49,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/vlingenfelter/women-of-venus.git"
   },
   "scripts": {
     "build": "gatsby build",
