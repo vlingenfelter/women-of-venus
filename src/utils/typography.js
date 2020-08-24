@@ -15,12 +15,6 @@ oceanBeachTheme.overrideThemeStyles = () => {
 const typography = new Typography({
 	googleFonts: [
 	  {
-	    name: 'Roboto Mono',
-	    styles: [
-	      '700',
-	    ],
-	  },
-	  {
 	    name: 'Arvo',
 	    styles: [
 	      '700',

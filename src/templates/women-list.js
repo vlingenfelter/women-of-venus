@@ -35,6 +35,9 @@ const BlogList = ({ data, pageContext, location }) => {
                     marginRight: rhythm(1 / 2),
                     marginBottom: 0,
                     maxWidth: 300,
+                    display: 'block',
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
                   }}
                 />
             

@@ -26,7 +26,7 @@ const Layout = ({ location, title, children }) => {
       <nav
         className='nav'
         style={{
-          marginBottom: rhythm(1)
+          marginBottom: rhythm(1),
         }}
       >
         <h3
@@ -72,6 +72,9 @@ const Layout = ({ location, title, children }) => {
   return (
     <div
       style={{
+        display: `flex`,
+        flexDirection: `column`,
+        justifyContent: `center`,
         marginLeft: `auto`,
         marginRight: `auto`,
         maxWidth: rhythm(30),

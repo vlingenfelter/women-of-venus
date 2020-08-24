@@ -30,14 +30,19 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             {post.frontmatter.title}
           </h1>
         </header>
+
          <Image 
             fluid={post.frontmatter.face.childImageSharp.fluid} 
             alt={post.frontmatter.title}
             style={{
               marginBottom: 0,
               maxWidth: 600,
+              display: 'block',
+              marginLeft: 'auto',
+              marginRight: 'auto',
             }}
           />
+          
         <section dangerouslySetInnerHTML={{ __html: post.html }} 
            style={{
              marginTop: rhythm(1)

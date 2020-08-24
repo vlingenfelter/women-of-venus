@@ -39,7 +39,7 @@ const About = ({location}) => {
      <h1>What is happening here?</h1>
      <p> This is a passion project</p>
     
-    </Layout>
+     </Layout>
   )
 }
 

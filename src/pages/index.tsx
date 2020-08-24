@@ -41,30 +41,55 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
 
       <p
         style={{
-          fontSize: rhythm(1),
+          fontSize: rhythm(0.75),
         }} 
       >
         There is a planet far, far away. Its surface is marked by many holes and craters. In each crater is an Earthling woman. Each woman was specifically chosen to inhabit this harsh, hot planet. But why? 
         <br/>
         <br/>
         Who are these women?
-      </p>
+        <br />
+        <br />
+        Let us introduce you:
+     
 
-      <div>
+      <div
+        style={{
+          paddingLeft: rhythm(0.5),
+        }}
+      >
         <Link
           to='/faces/'
         >
-          Browse them by face
+          - Meet all the women
         </Link>
       </div>
 
-      <div>
+      <div
+        style={{
+          paddingLeft: rhythm(0.5),
+        }}
+      >
         <Link
           to='/categories/'
         >
-          Browse them by category
+          - Meet the women by category
         </Link>
       </div>
+
+      <div
+        style={{
+          paddingLeft: rhythm(0.5),
+        }}
+      >
+        <Link
+          to='/faces/'
+        >
+          - Meet one woman at random
+        </Link>
+      </div>
+
+      </p>
      
     </Layout>
   )
