@@ -5,6 +5,7 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
   color: #61305d;
+  text-align: center;
 }
 
 a {
@@ -37,6 +38,7 @@ footer {
 .nav {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .navLinkWrapper {
@@ -60,9 +62,11 @@ footer {
   .nav { 
     display: flex;
     flex-direction: column;
+    justify-content: initial;
   }
 
   .navLinkWrapper {
     padding-left: 0em;
+    justify-content: center;
   }
 }
