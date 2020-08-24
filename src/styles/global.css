@@ -1,21 +1,9 @@
-@font-face {
-    font-family: 'Glysa';
-    src: url('../../static/fonts/glysa/Glysa-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
-
 html {
 /*  background-color: #fbddc0; */
   background-color: papayawhip;
 }
 
 h1 {
-  /*font-family: 'Glysa';*/
-  /*font-family: 'Helvetica';
-  background: -webkit-linear-gradient(#f7b679, #e77c7c, #61305d);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;*/
   color: #61305d;
 }
 
