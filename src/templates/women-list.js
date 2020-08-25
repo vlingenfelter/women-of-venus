@@ -11,8 +11,8 @@ const BlogList = ({ data, pageContext, location }) => {
   const { currentPage, numPages } = pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
-  const prevPage = currentPage - 1 === 1 ? "/" : `/${currentPage - 1}`
-  const nextPage = `/${currentPage + 1}`
+  const prevPage = currentPage - 1 === 1 ? "faces/" : `faces/${currentPage - 1}`
+  const nextPage = `faces/${currentPage + 1}`
 
   return (
     <Layout location={location} title={siteTitle}>
