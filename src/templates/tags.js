@@ -6,7 +6,7 @@ import { Link, graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
 import Image from "gatsby-image"
 import Layout from "../components/layout"
-
+import SEO from "../components/seo"
 
 const Tags = ({ pageContext, data, location }) => {
   const { tag } = pageContext
@@ -18,6 +18,9 @@ const Tags = ({ pageContext, data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
+    <SEO
+        title={tagHeader}
+      />
       <h1>{tagHeader}</h1>
       <div className="faces">
           {edges.map(({ node }) => {

@@ -7,7 +7,7 @@ import kebabCase from "lodash/kebabCase"
 // Components
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
-
+import SEO from "../components/seo"
 
 const TagsPage = ({
   data: {
@@ -20,6 +20,9 @@ const TagsPage = ({
 }) => (
     
     <Layout location={location} title={title}>
+      <SEO
+        title="Categories"
+      />
       <h1>Categories</h1>
       <p>
         {group.map(tag => (
